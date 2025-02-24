@@ -2,7 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AppLayout from "./components/layouts/AppLayout.jsx"
 import Home from './pages/Home.jsx';
-import Contact from './pages/Contact.jsx';
+import Contact, { contactData } from './pages/Contact.jsx';
 import Movie from './pages/Movie.jsx';
 import Service from './pages/Service.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,7 +25,8 @@ const App = () => {
         },
         {
           path: "/react-router-form-component-n-action/contact",
-          element: <Contact />
+          element: <Contact />,
+          action: contactData,
         },
         {
           path: "/react-router-form-component-n-action/movie",
